@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background-color: #09090b;
+  /* Zinc-950: Professional Dark Mode */
+  color: #e4e4e7;
+  /* Zinc-200: High Readability Text */
+}
+
+body {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  /* Professional Coding Font */
+  background-color: #09090b;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar - Minimalist */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  /* Zinc-800 */
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+  /* Zinc-700 */
+}
+
+/* Utilities for Professional UI */
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+input:focus,
+button:focus {
+  outline: 2px solid #2563eb;
+  /* Professional Blue Focus Ring */
+  outline-offset: 1px;
+}
