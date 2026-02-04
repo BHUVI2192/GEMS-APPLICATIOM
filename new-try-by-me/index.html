@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="NEXUS - Premium creative digital studio specializing in web design, 3D experiences, and brand strategy. Transform your vision into stunning digital reality.">
+    <meta name="keywords"
+        content="digital studio, web design, 3D experiences, brand strategy, creative agency, UX design, WebGL">
+    <meta name="author" content="NEXUS Studio">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="NEXUS | Creative Digital Studio">
+    <meta property="og:description"
+        content="Premium creative digital studio specializing in web design, 3D experiences, and brand strategy.">
+    <meta property="og:type" content="website">
+    <title>NEXUS | Creative Digital Studio - Web Design & 3D Experiences</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <!-- Page Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">NEXUS</div>
+            <div class="loader-progress">
+                <div class="loader-bar"></div>
+            </div>
+            <div class="loader-percent">0%</div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-circle"></div>
+    </div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scrollProgress">
+        <div class="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <a href="/" class="logo">NEXUS</a>
+
+            <div class="nav-right">
+                <button class="sound-toggle" id="soundToggle" aria-label="Toggle sound">
+                    <svg class="sound-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M11 5L6 9H2v6h4l5 4V5z" />
+                        <path class="sound-wave" d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+                        <path class="sound-wave" d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                    </svg>
+                </button>
+
+                <a href="#contact" class="btn btn-primary">LET'S TALK</a>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <nav class="mobile-nav">
+            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="#work" class="mobile-nav-link">Work</a>
+            <a href="#showreel" class="mobile-nav-link">Showreel</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <canvas class="hero-canvas" id="heroCanvas"></canvas>
+
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="hero-line">Crafting Digital</span>
+                    <span class="hero-line">Experiences That Inspire</span>
+                </h1>
+                <p class="hero-subtitle">We transform brands through immersive web design and 3D innovation</p>
+            </div>
+
+            <div class="scroll-indicator" id="scrollIndicator">
+                <span>SCROLL TO EXPLORE</span>
+                <div class="scroll-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 5v14M19 12l-7 7-7-7" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Decorative Plus Icons -->
+            <div class="plus-icon plus-1">+</div>
+            <div class="plus-icon plus-2">+</div>
+            <div class="plus-icon plus-3">+</div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="about-container">
+                <div class="about-visual">
+                    <canvas class="about-canvas" id="aboutCanvas"></canvas>
+                </div>
+
+                <div class="about-content">
+                    <h2 class="about-title">
+                        <span class="word">Beyond</span>
+                        <span class="word">Visions</span>
+                        <span class="word">Within</span>
+                        <span class="word">Reach</span>
+                    </h2>
+
+                    <p class="about-text">
+                        We are a creative studio specializing in crafting immersive digital experiences.
+                        Our team combines cutting-edge technology with artistic vision to deliver
+                        projects that captivate audiences and drive results.
+                    </p>
+
+                    <a href="#" class="btn btn-secondary">ABOUT US</a>
+                </div>
+            </div>
+
+            <div class="plus-icon plus-4">+</div>
+        </section>
+
+        <!-- Blob Mask Animation Section -->
+        <section class="blob-mask-section" id="blobMask">
+            <div class="blob-canvas-wrapper">
+                <canvas class="blob-canvas" id="blobCanvas"></canvas>
+                <video id="maskVideo" loop muted playsinline>
+                    <!-- Video removed to prevent 404, replaced by flower bloom -->
+                </video>
+
+                <!-- Flowing decorative curves -->
+                <svg class="flowing-curves" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+                    <defs>
+                        <linearGradient id="curveGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#0066FF;stop-opacity:0.8" />
+                            <stop offset="50%" style="stop-color:#00D9FF;stop-opacity:0.6" />
+                            <stop offset="100%" style="stop-color:#0066FF;stop-opacity:0.3" />
+                        </linearGradient>
+                        <linearGradient id="curveGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#00D9FF;stop-opacity:0.5" />
+                            <stop offset="100%" style="stop-color:#0066FF;stop-opacity:0.8" />
+                        </linearGradient>
+                    </defs>
+                    <path class="flowing-curve" d="M-100,300 Q400,200 800,350 T1600,280 T2100,350" fill="none"
+                        stroke="url(#curveGradient1)" stroke-width="60" stroke-linecap="round" />
+                    <path class="flowing-curve" d="M-100,500 Q300,600 700,450 T1400,550 T2100,480" fill="none"
+                        stroke="url(#curveGradient2)" stroke-width="40" stroke-linecap="round" />
+                    <path class="flowing-curve" d="M-100,750 Q500,680 900,800 T1700,720 T2100,780" fill="none"
+                        stroke="url(#curveGradient1)" stroke-width="30" stroke-linecap="round" />
+                </svg>
+
+                <div class="blob-content">
+                    <h2 class="blob-title">
+                        <span class="blob-word">Beyond</span>
+                        <span class="blob-word">Visions</span>
+                        <span class="blob-word">Within</span>
+                        <span class="blob-word">Reach</span>
+                    </h2>
+                    <span class="play-reel-text">PLAY REEL</span>
+                </div>
+            </div>
+
+            <div class="blob-scroll-space"></div>
+        </section>
+
+        <!-- 3D Immersive Tablet Section -->
+        <section class="immersive-section" id="immersive">
+            <div class="immersive-canvas-wrapper">
+                <canvas class="immersive-canvas" id="immersiveCanvas"></canvas>
+
+                <div class="immersive-content">
+                    <h2 class="immersive-title">
+                        <span class="immersive-line">Connecting Ideals to</span>
+                        <span class="immersive-line">Crafted Experiences</span>
+                    </h2>
+                    <p class="immersive-subtitle">Enter the digital dimension</p>
+                </div>
+            </div>
+
+            <div class="immersive-scroll-space"></div>
+        </section>
+
+        <!-- Showreel Section -->
+        <section class="showreel" id="showreel">
+            <div class="showreel-container">
+                <div class="showreel-video" id="showreelVideo">
+                    <video loop muted playsinline id="reelVideo">
+                        <!-- Video removed to prevent 404 -->
+                    </video>
+                    <div class="showreel-overlay">
+                        <div class="showreel-text">
+                            <span class="play-text">PLAY</span>
+                            <span class="reel-text">REEL</span>
+                        </div>
+                        <button class="play-button" id="playButton" aria-label="Play showreel">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5,3 19,12 5,21" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Work Section -->
+        <section class="work" id="work">
+            <div class="work-header">
+                <h2 class="work-title">
+                    <span class="title-line">Featured</span>
+                    <span class="title-line">Work</span>
+                </h2>
+
+                <p class="work-subtitle">
+                    A SELECTION OF OUR MOST PASSIONATELY CRAFTED WORKS WITH
+                    FORWARD-THINKING CLIENTS AND FRIENDS OVER THE YEARS.
+                </p>
+            </div>
+
+            <div class="work-grid">
+                <!-- Project 1 - Large -->
+                <article class="project-card project-large">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #0066FF, #00D9FF);">
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span>WEB</span>
+                        <span>DESIGN</span>
+                        <span>DEVELOPMENT</span>
+                    </div>
+                    <h3 class="project-title">
+                        <span class="char">N</span><span class="char">e</span><span class="char">u</span><span
+                            class="char">r</span><span class="char">a</span><span class="char">l</span><span
+                            class="char"> </span><span class="char">F</span><span class="char">i</span><span
+                            class="char">n</span><span class="char">a</span><span class="char">n</span><span
+                            class="char">c</span><span class="char">e</span>
+                    </h3>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #1A1D29, #333);">
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span>3D</span>
+                        <span>WEBGL</span>
+                    </div>
+                    <h3 class="project-title">
+                        <span class="char">V</span><span class="char">o</span><span class="char">i</span><span
+                            class="char">d</span><span class="char"> </span><span class="char">S</span><span
+                            class="char">t</span><span class="char">u</span><span class="char">d</span><span
+                            class="char">i</span><span class="char">o</span>
+                    </h3>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #FF6B35, #F7C59F);">
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span>BRANDING</span>
+                        <span>MOTION</span>
+                    </div>
+                    <h3 class="project-title">
+                        <span class="char">A</span><span class="char">u</span><span class="char">r</span><span
+                            class="char">o</span><span class="char">r</span><span class="char">a</span><span
+                            class="char"> </span><span class="char">L</span><span class="char">a</span><span
+                            class="char">b</span><span class="char">s</span>
+                    </h3>
+                </article>
+
+                <!-- Project 4 - Large -->
+                <article class="project-card project-large">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #6B5B95, #B8A9C9);">
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span>E-COMMERCE</span>
+                        <span>UX</span>
+                        <span>DEVELOPMENT</span>
+                    </div>
+                    <h3 class="project-title">
+                        <span class="char">Q</span><span class="char">u</span><span class="char">a</span><span
+                            class="char">n</span><span class="char">t</span><span class="char">u</span><span
+                            class="char">m</span><span class="char"> </span><span class="char">S</span><span
+                            class="char">h</span><span class="char">o</span><span class="char">p</span>
+                    </h3>
+                </article>
+            </div>
+
+            <div class="work-cta">
+                <a href="#" class="link-underline">SEE ALL PROJECTS</a>
+            </div>
+
+            <div class="plus-icon plus-5">+</div>
+            <div class="plus-icon plus-6">+</div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta" id="cta">
+            <div class="cta-background"></div>
+
+            <div class="cta-content">
+                <h2 class="cta-title">
+                    <span class="cta-word">IS</span>
+                    <span class="cta-word">YOUR</span>
+                    <span class="cta-word">BIG</span>
+                    <span class="cta-word">IDEA</span>
+                    <span class="cta-word">READY</span>
+                    <span class="cta-word">TO</span>
+                    <span class="cta-word">GO</span>
+                    <span class="cta-word">WILD?</span>
+                </h2>
+
+                <p class="cta-subtitle">Let's work together!</p>
+
+                <a href="#contact" class="btn btn-primary btn-large">START A PROJECT</a>
+            </div>
+        </section>
+
+        <!-- Contact/Footer Section -->
+        <footer class="footer" id="contact">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 class="footer-heading">Address</h4>
+                    <a href="https://maps.google.com" target="_blank" class="footer-link">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="footer-icon">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                        <span>
+                            123 Creative Avenue<br>
+                            San Francisco, CA 94102
+                        </span>
+                    </a>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Social</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="social-icon">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                            <span>Twitter</span>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="social-icon">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                            </svg>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="social-icon">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contact</h4>
+                    <a href="mailto:hello@nexus.studio" class="footer-link">
+                        <span>General enquiries</span>
+                        <span class="footer-email">hello@nexus.studio</span>
+                    </a>
+                    <a href="mailto:projects@nexus.studio" class="footer-link">
+                        <span>New business</span>
+                        <span class="footer-email">projects@nexus.studio</span>
+                    </a>
+
+                    <form class="newsletter" id="newsletter">
+                        <div class="newsletter-input-wrap">
+                            <input type="email" placeholder="Your email" class="newsletter-input" required>
+                            <button type="submit" class="newsletter-submit" aria-label="Subscribe">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>©2025 NEXUS Creative Studio</p>
+                <p>Built by NEXUS with ❤️</p>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/perlin.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/three-scene.js"></script>
+    <script src="js/blob-mask.js"></script>
+    <script src="js/flower-bloom.js"></script>
+    <script src="js/immersive-tablet.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/animations.js"></script>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
