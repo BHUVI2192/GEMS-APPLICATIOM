@@ -1,0 +1,638 @@
+/* ============================================
+   COLLEGE MANAGEMENT SYSTEM - PAGE SPECIFIC
+   ============================================ */
+
+/* ==================== ANNOUNCEMENT CARD ==================== */
+.announcement-card {
+    background-color: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+    border: 1px solid var(--border-light);
+    transition: box-shadow var(--transition-fast);
+}
+
+.announcement-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.announcement-header {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+}
+
+.announcement-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    background-color: var(--primary);
+    color: var(--text-inverse);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--font-semibold);
+    flex-shrink: 0;
+}
+
+.announcement-meta {
+    flex: 1;
+}
+
+.announcement-author {
+    font-weight: var(--font-medium);
+    color: var(--text-primary);
+}
+
+.announcement-date {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+}
+
+.announcement-title {
+    font-size: var(--text-lg);
+    font-weight: var(--font-semibold);
+    margin-bottom: var(--space-2);
+    color: var(--text-primary);
+}
+
+.announcement-content {
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+}
+
+.announcement-tags {
+    display: flex;
+    gap: var(--space-2);
+    margin-top: var(--space-3);
+    flex-wrap: wrap;
+}
+
+/* ==================== ASSIGNMENT CARD ==================== */
+.assignment-card {
+    background-color: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: var(--space-5);
+    border: 1px solid var(--border-light);
+    border-left: 4px solid var(--primary);
+}
+
+.assignment-card.urgent {
+    border-left-color: var(--danger);
+}
+
+.assignment-card.completed {
+    border-left-color: var(--success);
+}
+
+.assignment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-3);
+}
+
+.assignment-subject {
+    font-size: var(--text-xs);
+    color: var(--text-secondary);
+    margin-bottom: var(--space-1);
+}
+
+.assignment-title {
+    font-size: var(--text-base);
+    font-weight: var(--font-semibold);
+    color: var(--text-primary);
+}
+
+.assignment-due {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+}
+
+.assignment-due.overdue {
+    color: var(--danger);
+}
+
+.assignment-description {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    margin-bottom: var(--space-3);
+}
+
+.assignment-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.assignment-stats {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+}
+
+/* ==================== RESOURCE CARD ==================== */
+.resource-card {
+    background-color: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+    border: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    transition: box-shadow var(--transition-fast);
+    cursor: pointer;
+}
+
+.resource-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.resource-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.resource-icon.pdf {
+    background-color: var(--danger-light);
+    color: var(--danger);
+}
+
+.resource-icon.doc {
+    background-color: var(--info-light);
+    color: var(--info);
+}
+
+.resource-icon.video {
+    background-color: var(--warning-light);
+    color: #B45309;
+}
+
+.resource-icon.link {
+    background-color: var(--primary-light);
+    color: var(--primary);
+}
+
+.resource-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.resource-title {
+    font-weight: var(--font-medium);
+    color: var(--text-primary);
+    margin-bottom: var(--space-1);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.resource-meta {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+}
+
+/* ==================== NOTIFICATION ITEM ==================== */
+.notification-item {
+    display: flex;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-md);
+    transition: background-color var(--transition-fast);
+    cursor: pointer;
+}
+
+.notification-item:hover {
+    background-color: var(--bg-hover);
+}
+
+.notification-item.unread {
+    background-color: var(--primary-lighter);
+}
+
+.notification-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background-color: var(--bg-hover);
+    color: var(--text-secondary);
+}
+
+.notification-item.unread .notification-icon {
+    background-color: var(--primary-light);
+    color: var(--primary);
+}
+
+.notification-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.notification-title {
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    color: var(--text-primary);
+    margin-bottom: var(--space-1);
+}
+
+.notification-text {
+    font-size: var(--text-xs);
+    color: var(--text-secondary);
+    margin-bottom: var(--space-1);
+}
+
+.notification-time {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+}
+
+/* ==================== MARKS TABLE ==================== */
+.marks-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.marks-table th,
+.marks-table td {
+    padding: var(--space-3);
+    text-align: center;
+    border: 1px solid var(--border-light);
+}
+
+.marks-table thead th {
+    background-color: var(--primary);
+    color: var(--text-inverse);
+    font-weight: var(--font-semibold);
+    font-size: var(--text-sm);
+}
+
+.marks-table tbody td {
+    font-size: var(--text-sm);
+}
+
+.marks-table .subject-col {
+    text-align: left;
+    font-weight: var(--font-medium);
+}
+
+.marks-input {
+    width: 60px;
+    padding: var(--space-2);
+    text-align: center;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    font-size: var(--text-sm);
+}
+
+.marks-input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.marks-grade {
+    font-weight: var(--font-semibold);
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
+}
+
+.marks-grade.a {
+    background-color: var(--success-light);
+    color: var(--success);
+}
+
+.marks-grade.b {
+    background-color: var(--primary-light);
+    color: var(--primary);
+}
+
+.marks-grade.c {
+    background-color: var(--warning-light);
+    color: #B45309;
+}
+
+.marks-grade.d {
+    background-color: var(--danger-light);
+    color: var(--danger);
+}
+
+/* ==================== QUICK ACTION BUTTONS ==================== */
+.quick-actions {
+    display: flex;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+}
+
+.quick-action-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-4);
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    min-width: 100px;
+}
+
+.quick-action-btn:hover {
+    border-color: var(--primary);
+    box-shadow: var(--shadow-md);
+}
+
+.quick-action-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    background-color: var(--primary-light);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quick-action-label {
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    color: var(--text-primary);
+    text-align: center;
+}
+
+/* ==================== PROGRAM CARD ==================== */
+.program-card {
+    background-color: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: var(--space-5);
+    border: 1px solid var(--border-light);
+    transition: all var(--transition-fast);
+    cursor: pointer;
+}
+
+.program-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary);
+}
+
+.program-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-3);
+}
+
+.program-name {
+    font-size: var(--text-lg);
+    font-weight: var(--font-semibold);
+    color: var(--text-primary);
+}
+
+.program-code {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+}
+
+.program-stats {
+    display: flex;
+    gap: var(--space-4);
+    margin-top: var(--space-4);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--border-light);
+}
+
+.program-stat {
+    text-align: center;
+}
+
+.program-stat-value {
+    font-size: var(--text-xl);
+    font-weight: var(--font-bold);
+    color: var(--primary);
+}
+
+.program-stat-label {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+}
+
+/* ==================== SECTION PILLS ==================== */
+.section-pills {
+    display: flex;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+}
+
+.section-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-4);
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    font-weight: var(--font-medium);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.section-pill:hover {
+    border-color: var(--primary);
+    background-color: var(--primary-lighter);
+}
+
+.section-pill.active {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: var(--text-inverse);
+}
+
+.section-pill-count {
+    font-size: var(--text-xs);
+    padding: var(--space-1) var(--space-2);
+    background-color: var(--bg-hover);
+    border-radius: var(--radius-full);
+}
+
+.section-pill.active .section-pill-count {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ==================== TODAY SCHEDULE ==================== */
+.schedule-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-4);
+    background-color: var(--bg-card);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-light);
+    margin-bottom: var(--space-3);
+}
+
+.schedule-time {
+    text-align: center;
+    min-width: 60px;
+}
+
+.schedule-time-start {
+    font-weight: var(--font-semibold);
+    color: var(--text-primary);
+}
+
+.schedule-time-end {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+}
+
+.schedule-divider {
+    width: 4px;
+    height: 50px;
+    background-color: var(--primary);
+    border-radius: var(--radius-full);
+}
+
+.schedule-info {
+    flex: 1;
+}
+
+.schedule-subject {
+    font-weight: var(--font-semibold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-1);
+}
+
+.schedule-details {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+}
+
+.schedule-status {
+    font-size: var(--text-xs);
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-full);
+}
+
+.schedule-status.ongoing {
+    background-color: var(--success-light);
+    color: var(--success);
+}
+
+.schedule-status.upcoming {
+    background-color: var(--primary-light);
+    color: var(--primary);
+}
+
+.schedule-status.completed {
+    background-color: var(--bg-hover);
+    color: var(--text-muted);
+}
+
+/* ==================== EXAM SCHEDULE ==================== */
+.exam-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-4);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.exam-item:last-child {
+    border-bottom: none;
+}
+
+.exam-date {
+    text-align: center;
+    min-width: 60px;
+    padding: var(--space-2);
+    background-color: var(--primary-light);
+    border-radius: var(--radius-md);
+}
+
+.exam-date-day {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-bold);
+    color: var(--primary);
+    line-height: 1;
+}
+
+.exam-date-month {
+    font-size: var(--text-xs);
+    color: var(--primary);
+    text-transform: uppercase;
+}
+
+.exam-info {
+    flex: 1;
+}
+
+.exam-subject {
+    font-weight: var(--font-semibold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-1);
+}
+
+.exam-type {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+}
+
+/* ==================== HEATMAP ==================== */
+.heatmap {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+}
+
+.heatmap-cell {
+    aspect-ratio: 1;
+    border-radius: var(--radius-sm);
+    position: relative;
+}
+
+.heatmap-cell.level-0 {
+    background-color: var(--bg-hover);
+}
+
+.heatmap-cell.level-1 {
+    background-color: var(--success-light);
+}
+
+.heatmap-cell.level-2 {
+    background-color: #86EFAC;
+}
+
+.heatmap-cell.level-3 {
+    background-color: #4ADE80;
+}
+
+.heatmap-cell.level-4 {
+    background-color: var(--success);
+}
+
+.heatmap-legend {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-top: var(--space-3);
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+}
+
+.heatmap-legend-item {
+    width: 12px;
+    height: 12px;
+    border-radius: var(--radius-sm);
+}
